@@ -44,7 +44,15 @@
                         <section class="search-bar">
                             <div class="input-container mt-2">
                                 <i class="fas fa-search"></i>
-                                <input type="text" class="search-user" placeholder="cerca">
+                                <input type="text" class="search-user" placeholder="Cerca o inizia una nuova chat">
+                            </div>
+                        </section>
+
+
+                        <section class= 'users-list'>
+                            <div class="user-contact" v-for = "(element,index) in contacts">
+                                <img :src="userz_img(index)">
+                                {{element.name}}
                             </div>
                         </section>
 
