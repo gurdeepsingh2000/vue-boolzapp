@@ -50,10 +50,12 @@
 
 
                         <section class= 'users-list'>
+                            <div class="scrollable-content">
                             <div class="user-contact" v-for = "(element,index) in contacts">
                                 <img :src="user_avatar(index)">
                                 {{element.name}}
                             </div>
+                        </div>
                         </section>
 
                     </div>

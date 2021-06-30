@@ -100,8 +100,13 @@
 }
 
 .users-list{
-    height: 100%;
+    height: 440px;
+}
 
+.scrollable-content{
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .user-contact{
@@ -217,5 +222,16 @@ footer i{
     display: flex;
     flex-direction: row-reverse;
 }
+
+.text-receiver{
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 18px;
+    height: 80px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+
 
 
