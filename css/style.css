@@ -11,3 +11,84 @@
 .bg{
     background-color: crimson;
 }
+
+.user-options{
+    height: 40px;
+    background-color: darkgreen;
+}
+
+nav{
+    display: flex;
+    height: 90px;
+    background-color: darkmagenta;
+    justify-content: space-between;
+    align-items: center;
+}
+.circle-img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    border: black 1px solid;
+    margin-right: 10px;
+}
+
+.user-name{
+    display: flex;
+    align-items: center;
+}
+
+.notification{
+    display: flex;
+    align-items: center;
+    background-color: #9FD8F8;
+    width: 100%;
+    height:100px;
+}
+
+.container-bell{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    margin-right: 5px;
+    background-color: burlywood;
+    text-align: center;
+}
+
+.container-bell i{
+    font-size:28px;
+    color: red;
+    position:relative;
+    top: calc(50% - 15px);
+}
+
+#small-txt{
+    border-bottom: grey 2px solid;
+}
+
+.search-bar{
+    background-color: white;
+    height: 50px;
+}
+
+.input-container{
+    width: 100%;
+    height: 35px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.search-user{
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.input-container i{
+    font-size: 18px;
+    margin-right: 5px;
+    color: grey;
+}
+
+
+
