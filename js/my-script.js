@@ -5,14 +5,14 @@ new Vue (
         el: '#app', 
         data:{
             user_img: [
-                        '/img/avatar_1.jpg',
-                        '/img/avatar_2.jpg',
-                        '/img/avatar_3.jpg',
-                        '/img/avatar_4.jpg',
-                        '/img/avatar_5.jpg',
-                        '/img/avatar_6.jpg',
-                        '/img/avatar_7.jpg',
-                        '/img/avatar_8.jpg'
+                        './img/avatar_1.jpg',
+                        './img/avatar_2.jpg',
+                        './img/avatar_3.jpg',
+                        './img/avatar_4.jpg',
+                        './img/avatar_5.jpg',
+                        './img/avatar_6.jpg',
+                        './img/avatar_7.jpg',
+                        './img/avatar_8.jpg'
                         ],
                         
             contacts: [
@@ -103,15 +103,9 @@ new Vue (
             
         },
         methods:{
-            userz_img: function(index){
-               for(var x = 0; this.user_img.length >= 7; x++){
-                   if(index === [x]){
-                    return this.user_img[x]
-                   }else{
-                       break
-                   }
-               }
-            }
+            user_avatar: function(index){
+                return this.user_img[index]
+            } 
         }
     }
 )

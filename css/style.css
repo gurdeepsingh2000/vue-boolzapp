@@ -17,12 +17,13 @@
     background-color: darkgreen;
 }
 
-nav{
+#user{
     display: flex;
     height: 90px;
     background-color: darkmagenta;
     justify-content: space-between;
     align-items: center;
+    border-right: grey 1px solid;
 }
 .circle-img{
     height: 60px;
@@ -93,16 +94,50 @@ nav{
 
 .users-list{
     height: 100%;
+    overflow-y: hidden;
+
 }
 
 .user-contact{
-    height:80px;
+    height:10vh;
     width: 100%;
+    padding: 8px;
     background-color: khaki;
     border: black 1px solid;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+
 }
+
+.user-contact img{
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+    margin-right: 16px ;
+}
+
+.central-column{
+    background-color: rosybrown;
+    height: 85vh;
+}
+
+.actual-user-img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    border: black 1px solid;
+    margin-right: 10px;
+}
+
+#actual-contact{
+    display: flex;
+    height: 90px;
+    background-color: darkmagenta;
+    align-items: center;
+    border-right: grey 1px solid;
+}
+
+
 
 
 
