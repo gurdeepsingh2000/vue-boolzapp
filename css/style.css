@@ -1,0 +1,13 @@
+#app{
+    height: 100vh;
+    background-image: linear-gradient(#429488, #DADBD5);
+    }
+
+.sidebar{
+    background-color: cornflowerblue;
+    height: 85vh;
+}
+
+.bg{
+    background-color: crimson;
+}
