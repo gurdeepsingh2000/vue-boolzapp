@@ -198,3 +198,24 @@ footer i{
     height: 100%;
     background-color: green; 
 }
+
+.contact-reply{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.text-sender{
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 18px;
+    height: 80px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+#message-date{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
