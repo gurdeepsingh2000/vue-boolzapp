@@ -44,18 +44,17 @@
                         <section class="search-bar">
                             <div class="input-container mt-2">
                                 <i class="fas fa-search"></i>
-                                <input type="text" class="search-user" placeholder="Cerca o inizia una nuova chat">
+                                <input type="text" class="search-user"  placeholder="Cerca o inizia una nuova chat">
                             </div>
                         </section>
 
 
                         <section class= 'users-list'>
-                            <div class="scrollable-content">
-                            <div class="user-contact" v-for = "(element,index) in contacts">
+                            
+                            <div class="user-contact" v-for = "(element,index) in contacts" @click="actualUser(index)">
                                 <img :src="user_avatar(index)">
                                 {{element.name}}
                             </div>
-                        </div>
                         </section>
 
                     </div>
@@ -83,12 +82,12 @@
 
                         <section class="messages-area">
                             <div class="col-4 contact-reply">
-                                <div v-for="(message,index) in contacts[0].messages" class="text-sender" v-if = sender(message.status)>
+                                <div v-for="(message,index) in contacts[actualindex].messages" class="text-receiver" v-if = receiver(message.status)>
                                     <div>{{message.text}}</div>
                                 </div>
                             </div>
                             <div class="col-4 user-reply">
-                                <div v-for="(message,index) in contacts[0].messages" class="text-receiver" v-if = receiver(message.status)>
+                                <div v-for="(message,index) in contacts[actualindex].messages" class="text-sender" v-if = sender(message.status)>
                                     <div>{{message.text}}</div>
                                 </div>
                             </div>
@@ -98,7 +97,7 @@
                         <footer>
 
                             <div><i class="far fa-smile"></i></div>
-                            <div class="input-user"><input type="text" name="" id=""></div>
+                            <input class = 'input-user' @keyup.enter = 'pushMessage' type="text" name="" id="user_ytpe" v-model='add_txt'>
                             <div><i class="fas fa-microphone"></i></div>
                     
                         </footer>

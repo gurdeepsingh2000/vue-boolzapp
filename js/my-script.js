@@ -100,7 +100,8 @@ new Vue (
                         ],
                     },
             ],
-            actualindex: 0
+            actualindex: 0,
+            add_txt:""
             
         },
         methods:{
@@ -118,7 +119,14 @@ new Vue (
                 if(receive ==='received'){
                     return true
                 }
-            }
+            },
+            actualUser: function(index) {
+                return this.actualindex = index;
+            },  
+
+            pushMessage: function(){
+                
+            }          
         }
     }
 )
