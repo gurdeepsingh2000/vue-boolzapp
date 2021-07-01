@@ -101,7 +101,8 @@ new Vue (
                     },
             ],
             actualindex: 0,
-            add_txt:""
+            add_txt:"",
+            
             
         },
         methods:{
@@ -124,8 +125,11 @@ new Vue (
                 return this.actualindex = index;
             },  
 
-            pushMessage: function(){
-                
+            pushMessage: function(index){
+                if(typeof this.add_txt === 'string'){
+                    this.contacts[index].messages.push(add_txt)
+                }
+                this.add_txt = ""
             }          
         }
     }
