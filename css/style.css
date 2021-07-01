@@ -206,7 +206,7 @@ footer i{
 
 .contact-reply{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 
 .text-sender{
