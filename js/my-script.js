@@ -125,14 +125,17 @@ new Vue (
                 return this.actualindex = index;
             },  
 
-            pushMessage: function(index){
-                if(typeof this.add_txt === 'string'){
-                    this.contacts[index].messages.push(add_txt)
-                }
-                this.add_txt = ""
-            }          
+            pushMessage: function(){
+                this.contacts[this.actualindex].messages.push({date: "data", text: this.add_txt, status: "sent"});
+                this.add_txt = '';
+                replyMessage();
+            },     
+            
+            replyMessage: setTimeout(function(){ 
+                this.contacts[this.actualindex].messages.push({date: "data", text: 'ok', status: "received"})},
+                1000),
+            },
         }
-    }
 )
 
 
