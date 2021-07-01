@@ -126,16 +126,18 @@ new Vue (
             },  
 
             pushMessage: function(){
-                this.contacts[this.actualindex].messages.push({date: "data", text: this.add_txt, status: "sent"});
+                this.contacts[this.actualindex].messages.push({date: 'data', text: this.add_txt, status: "sent"});
                 this.add_txt = '';
-                replyMessage();
+                this.replyMessage()
             },     
             
-            replyMessage: setTimeout(function(){ 
-                this.contacts[this.actualindex].messages.push({date: "data", text: 'ok', status: "received"})},
-                1000),
-            },
+            replyMessage: function() {
+                setTimeout(() => {
+                    return this.contacts[this.actualindex].messages.push({date: "data", text: "Ok", status: "received"});
+                }, 1000)
+              }
         }
+    }
 )
 
 
