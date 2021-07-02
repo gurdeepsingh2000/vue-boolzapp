@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -44,7 +45,7 @@
                         <section class="search-bar">
                             <div class="input-container mt-2">
                                 <i class="fas fa-search"></i>
-                                <input type="text" class="search-user"  placeholder="Cerca o inizia una nuova chat">
+                                <input type="text" class="search-user" placeholder="Cerca o inizia una nuova chat" v-model ='user_search'>
                             </div>
                         </section>
 
@@ -84,11 +85,13 @@
                             <div class="col-4 contact-reply">
                                 <div v-for="(message,index) in contacts[actualindex].messages" class="text-receiver" v-if = receiver(message.status)>
                                     <div>{{message.text}}</div>
+                                    <div>{{ message.date }}</div>
                                 </div>
                             </div>
                             <div class="col-4 user-reply">
                                 <div v-for="(message,index) in contacts[actualindex].messages" class="text-sender" v-if = sender(message.status)>
                                     <div>{{message.text}}</div>
+                                    <div>{{ message.date }}</div>
                                 </div>
                             </div>
                         </section>

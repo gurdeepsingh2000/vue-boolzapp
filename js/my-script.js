@@ -102,6 +102,7 @@ new Vue (
             ],
             actualindex: 0,
             add_txt:"",
+            user_search:"",
             
             
         },
@@ -126,15 +127,20 @@ new Vue (
             },  
 
             pushMessage: function(){
-                this.contacts[this.actualindex].messages.push({date: 'data', text: this.add_txt, status: "sent"});
+                this.contacts[this.actualindex].messages.push({date: this.date_time(), text: this.add_txt, status: "sent"});
                 this.add_txt = '';
                 this.replyMessage()
             },     
             
             replyMessage: function() {
                 setTimeout(() => {
-                    return this.contacts[this.actualindex].messages.push({date: "data", text: "Ok", status: "received"});
+                    return this.contacts[this.actualindex].messages.push({date: this.date_time(), text: "Ok", status: "received"});
                 }, 1000)
+              },
+
+              date_time:function(){
+                const getTimeAndDate = dayjs()
+                return getTimeAndDate.format("DD/MM/YYYY HH:mm:ss")
               }
         }
     }

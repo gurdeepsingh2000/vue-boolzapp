@@ -167,6 +167,8 @@
     background-image: url(../img/mine.jpg);
     display: flex;
     justify-content: space-evenly;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 footer{
