@@ -162,11 +162,8 @@
     color: gray;
 }
 .messages-area{
-    width: 100%;
     height: 510px;
     background-image: url(../img/mine.jpg);
-    display: flex;
-    justify-content: space-evenly;
     overflow: hidden;
     overflow-y: scroll;
 }
@@ -196,33 +193,13 @@ footer i{
     margin-right: 10px;
 }
 
-.contact-reply{
-    height: 100%;
-    background-color: chocolate;
-}
-
-.user-reply{
-    height: 100%;
-    background-color: green; 
-}
-
-.contact-reply{
-    display: flex;
-    flex-direction: column;
-}
-
 .text-sender{
     padding: 20px;
-    background-color: #FFFFFF;
+    background-color: green;
     border-radius: 18px;
     height: 80px;
     margin-bottom: 8px;
     margin-top: 8px;
-}
-
-#message-date{
-    display: flex;
-    flex-direction: row-reverse;
 }
 
 .text-receiver{
@@ -234,6 +211,15 @@ footer i{
     margin-top: 8px;
 }
 
+.messaggio{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.messaggio-ricevente{
+    display: flex;
+    justify-content: flex-start;
+}
 
 
 

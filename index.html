@@ -81,17 +81,22 @@
 
 
 
-                        <section class="messages-area">
-                            <div class="col-4 contact-reply">
-                                <div v-for="(message,index) in contacts[actualindex].messages" class="text-receiver" v-if = receiver(message.status)>
-                                    <div>{{message.text}}</div>
-                                    <div>{{ message.date }}</div>
+                        <section class="messages-area d-flex flex-column">
+                                <div v-for="(message,index) in contacts[actualindex].messages">
+                                    <div class= 'messaggio'>
+                                    <div class="text-sender d-flex" v-if = sender(message.status)>
+                                    <div>{{message.text}}
+                                    <div class= "d-flex flex-row-reverse">{{ message.date }}</div>
+                                </div>
+                                </div>
+                                </div>
+
+                                <div class= 'messaggio-ricevente'>
+                                <div class="text-receiver d-flex" v-if = receiver(message.status)>
+                                    <div>{{message.text}}
+                                    <div class= 'd-flex flex-row-reverse'>{{message.date}}</div>
                                 </div>
                             </div>
-                            <div class="col-4 user-reply">
-                                <div v-for="(message,index) in contacts[actualindex].messages" class="text-sender" v-if = sender(message.status)>
-                                    <div>{{message.text}}</div>
-                                    <div>{{ message.date }}</div>
                                 </div>
                             </div>
                         </section>
