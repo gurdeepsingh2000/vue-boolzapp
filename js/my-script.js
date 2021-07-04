@@ -103,8 +103,6 @@ new Vue (
             actualindex: 0,
             add_txt:"",
             user_search:"",
-            
-            
         },
         methods:{
             user_avatar: function(index){
@@ -140,8 +138,8 @@ new Vue (
 
               date_time:function(){
                 const getTimeAndDate = dayjs()
-                return getTimeAndDate.format("DD/MM/YYYY HH:mm:ss")
-              }
+                return getTimeAndDate.format("DD/MM/YYYY hh:mm:ss")
+              },
         },
     }
 )

@@ -136,9 +136,15 @@
     height: 60px;
     width: 60px;
     border-radius: 50px;
-    border: black 1px solid;
     margin-right: 10px;
 }
+
+.actual-user-img img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+}
+
 
 #actual-contact{
     display: flex;
