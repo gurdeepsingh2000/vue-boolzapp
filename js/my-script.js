@@ -103,6 +103,7 @@ new Vue (
             actualindex: 0,
             add_txt:"",
             user_search:"",
+            add_date: "",
         },
         methods:{
             user_avatar: function(index){
@@ -129,17 +130,20 @@ new Vue (
                 this.add_txt = '';
                 this.replyMessage()
             },     
-            
             replyMessage: function() {
                 setTimeout(() => {
+                    this.date_time()
                     return this.contacts[this.actualindex].messages.push({date: this.date_time(), text: "Ok", status: "received"});
                 }, 1000)
               },
-
               date_time:function(){
                 const getTimeAndDate = dayjs()
                 return getTimeAndDate.format("DD/MM/YYYY hh:mm:ss")
               },
+                LastMessage_date:function(index){
+                let length = ((this.contacts[index].messages).length) -1
+                return this.contacts[index].messages[length].date
+              }
         },
     }
 )
