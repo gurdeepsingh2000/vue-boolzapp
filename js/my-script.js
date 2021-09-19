@@ -104,6 +104,10 @@ new Vue (
             add_txt:"",
             user_search:"",
             add_date: "",
+            filteredArray: null
+        },
+        mounted(){
+            this.checkMessage(this.contacts,this.user_search)
         },
         methods:{
             user_avatar: function(index){
@@ -143,6 +147,16 @@ new Vue (
                 LastMessage_date:function(index){
                 let length = ((this.contacts[index].messages).length) -1
                 return this.contacts[index].messages[length].date
+              },
+
+              checkMessage: function(array,userText){
+                  this.filteredArray = array.filter((element) =>{
+                        if(!element.name.toLowerCase().includes(userText.toLowerCase())){
+                            return false
+                        }else{
+                            return true
+                        }
+                  })
               }
         },
     }

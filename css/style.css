@@ -25,20 +25,24 @@
 
 #user{
     display: flex;
-    height: 90px;
     background-color: #EAEAEA;
     justify-content: space-between;
     align-items: center;
     border-right: grey 1px solid;
+    padding:10px;
 }
 .circle-img{
     height: 60px;
     width: 60px;
     border-radius: 50px;
-    border: black 1px solid;
     margin-right: 10px;
 }
 
+
+.circle-img img{
+    width: 100%;
+    border-radius: 50px
+}
 .user-name{
     display: flex;
     align-items: center;
@@ -49,7 +53,7 @@
     align-items: center;
     background-color: #9FD8F8;
     width: 100%;
-    height:100px;
+    padding: 5px;
 }
 
 .container-bell{
@@ -148,11 +152,11 @@
 
 #actual-contact{
     display: flex;
-    height: 90px;
     background-color: #EAEAEA;
     align-items: center;
     border-right: grey 1px solid;
     justify-content: space-between;
+    padding: 10px;
 }
 
 .user-container{
@@ -163,12 +167,12 @@
 .icons-options{
     display: flex;
     justify-content: space-around;
-    width: 160px;
+    width: 15%;
     font-size: 28px;
     color: gray;
 }
 .messages-area{
-    height: 510px;
+    height: 520px;
     background-image: url(../img/mine.jpg);
     overflow: hidden;
     overflow-y: scroll;
@@ -203,7 +207,6 @@ footer i{
     padding: 20px;
     background-color: green;
     border-radius: 18px;
-    height: 80px;
     margin-bottom: 8px;
     margin-top: 8px;
 }
@@ -212,7 +215,6 @@ footer i{
     padding: 20px;
     background-color: #FFFFFF;
     border-radius: 18px;
-    height: 80px;
     margin-bottom: 8px;
     margin-top: 8px;
 }

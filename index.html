@@ -22,8 +22,8 @@
 
                         <nav id="user">
                             <div class="user-name">
-                                <div class="circle-img"></div>
-                                <div>Nome utente</div>
+                                <div class="circle-img"><img src="./img/avatar_8.jpg" alt=""></div>
+                                <div>Gurdeep Singh</div>
                             </div>
                             <div class="user-options">
                                 <i class="fas fa-circle-notch"></i>
@@ -45,16 +45,18 @@
                         <section class="search-bar">
                             <div class="input-container mt-2">
                                 <i class="fas fa-search"></i>
-                                <input type="text" class="search-user" placeholder="Cerca o inizia una nuova chat" v-model ='user_search'>
+                                <input type="text" class="search-user" placeholder="Cerca o inizia una nuova chat" @keyup='checkMessage(contacts,user_search)' v-model ='user_search'>
                             </div>
                         </section>
 
 
                         <section class= 'users-list'>
                             
-                            <div class="user-contact" v-for = "(element,index) in contacts" @click="actualUser(index)">
+                            <div class="user-contact" v-for = "(element,index) in filteredArray" @click="actualUser(index)">
                                 <img :src="user_avatar(index)">
-                                {{element.name}}
+                               {{element.name}}
+                               <br>
+                                {{element.messages[element.messages.length - 1].text}}
                             </div>
                         </section>
 
